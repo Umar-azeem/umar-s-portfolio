@@ -7,7 +7,7 @@ function Contact() {
 
   const [scrolling, setScrolling] = useState(false);
        const onPageScroll = () => {
-        if (window.pageYOffset > 100) {
+        if (window.pageYOffset > 200) {
           setScrolling(true);
         } else {
           setScrolling(false);
