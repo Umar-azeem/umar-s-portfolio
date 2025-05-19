@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 function page() {
   return (
@@ -30,11 +31,13 @@ function page() {
           className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg"
         >
           <div className="h-20 w-20 rounded-full border overflow-hidden">
-            <img
-              src="https://avatars3.githubusercontent.com/u/2763884?s=128"
-              alt="Avatar"
-              className="h-full w-full"
-            />
+           <Image
+  src="https://avatars3.githubusercontent.com/u/2763884?s=128"
+  alt="Avatar"
+  width={128}
+  height={128}
+  className="h-full w-full"
+/>
           </div>
           <div className="text-sm font-semibold mt-2">Aminos Co.</div>
           <div className="text-xs text-gray-500">Lead UI/UX Designer</div>
@@ -182,7 +185,7 @@ function page() {
                     <div
                       className="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl"
                     >
-                      <div>I'm ok what about you?</div>
+                      <div>I{`'`}m ok what about you?</div>
                     </div>
                   </div>
                 </div>

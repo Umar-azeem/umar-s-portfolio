@@ -1,6 +1,7 @@
 'use client'
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card } from "../../components/Card"; 
+import Image from "next/image";
 
 const data = [
   { id: 1, 
@@ -25,17 +26,48 @@ const data = [
     live:"https://dev-linked.netlify.app/",
     github:"https://github.com/Umar-azeem/devlink.git-io.git",
    },
-   { id: 4, 
+   { id: 4,
     name: "Invoices",
     image: "/assets/imag/in.png",
     dicription:"As a frontend developer, I built this invoice app to streamline billing with dynamic forms and real-time calculations.",
     live:"https://melodic-gumdrop-8cf605.netlify.app/",
     github:"https://github.com/Umar-azeem/invoices",
    },
-  
+  { id: 5, 
+    name: "MobApp",
+    image: "/assets/imag/mob.png",
+    dicription:"A responsive Mobile App Landing Page built with React, Tailwind CSS v3.4, HTML5, and SCSS — includes fully functional components, clean layout structure, and optimized JavaScript logic for seamless user experience.",
+    live:"https://mobappres.netlify.app/",
+    github:"https://github.com/Umar-azeem/mobresponsiveapp.github.io.git",
+   },
+   { id: 6, 
+    name: "comment-sections",
+    image: "/assets/imag/comt.png",
+    dicription:"A responsive Mobile App Landing Page built with React, Tailwind CSS v3.4, HTML5, and SCSS — includes fully functional components, clean layout structure, and optimized JavaScript logic for seamless user experience.",
+    live:"https://comment-sections.netlify.app/",
+    github:"https://github.com/Umar-azeem/comment-sections",
+   },
 ];
 
+
+                  
+
 export default function Page() {
+    const [scrolling, setScrolling] = useState(false);
+  
+   const onPageScroll = () => {
+        if (window.pageYOffset > 200) {
+          setScrolling(true);
+        } else {
+          setScrolling(false);
+        }
+      };
+      useEffect(() => {
+        window.addEventListener("scroll", onPageScroll);
+        return () => {
+          window.removeEventListener("scroll", onPageScroll);
+        };
+      }, []);
   return (
     <div className="bg-transparent flex justify-center items-center container mx-auto lg:p-0">
       <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10 ">
@@ -54,6 +86,20 @@ export default function Page() {
           />
         ))}
       </div>
+       {
+                              scrolling && (
+                                <button className="fixed block right-8 bottom-10 w-24" onClick={() => {
+                                  window.scrollTo(0,0);
+                                }}>
+                                  <Image
+                src="/assets/imag/arrow-down.svg"
+                alt="Arrow Down"
+                width={100}
+                height={100}
+              />
+                                </button>
+                              )
+                            }
     </div>
   );
 }
