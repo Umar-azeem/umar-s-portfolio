@@ -37,7 +37,6 @@ export default function RootLayout({
         <Header />
         <Particles />
         {children}
-        
         <Conpage />
       </body>
     </html>
