@@ -133,7 +133,7 @@ export default function Page() {
         </section>
           {
                         scrolling && (
-                          <button className="fixed block right-8 bottom-10 w-24" onClick={() => {
+                          <button className="fixed block right-8 bottom-10 w-16 sm:w-24" onClick={() => {
                             window.scrollTo(0,0);
                           }}>
                             <Image

@@ -45,7 +45,7 @@ export function Card({
   };
 
   return (
-    <div className="relative w-[400px] h-[400px] group">
+    <div className="relative w-[320px] h-[320px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] group">
       {/* 🔥 Glow Background (only visible on hover) */}
       <div
         className={`absolute transition-all duration-1000 opacity-0 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-[12px] blur-lg 

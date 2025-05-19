@@ -69,8 +69,8 @@ export default function Page() {
         };
       }, []);
   return (
-    <div className="bg-transparent flex justify-center items-center container mx-auto lg:p-0">
-      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10 ">
+    <div className="bg-transparent flex justify-center items-center container mx-auto lg:p-0 ">
+      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-7 lg:gap-10 ">
         {data.map((item) => (
           <Card
             key={item.id}
@@ -88,16 +88,17 @@ export default function Page() {
       </div>
        {
                               scrolling && (
-                                <button className="fixed block right-8 bottom-10 w-24" onClick={() => {
-                                  window.scrollTo(0,0);
-                                }}>
-                                  <Image
-                src="/assets/imag/arrow-down.svg"
-                alt="Arrow Down"
-                width={100}
-                height={100}
-              />
-                                </button>
+                                <button
+      className="fixed block right-6 bottom-8 sm:right-8 sm:bottom-10 w-16 sm:w-24 z-50"
+      onClick={() => window.scrollTo(0, 0)}
+    >
+      <Image
+        src="/assets/imag/arrow-down.svg"
+        alt="Arrow Down"
+        width={100}
+        height={100}
+      />
+    </button>
                               )
                             }
     </div>

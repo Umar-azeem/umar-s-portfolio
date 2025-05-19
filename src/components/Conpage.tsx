@@ -9,7 +9,7 @@ import {
 export default function Conpage() {
   return (
     <section>
-      <div className="container m-auto flex justify-between px-4 py-6">
+      <div className="container m-auto flex justify-between px-4 py-6 mt-5">
         <div>
           <p className="text-gray-300 text-sm mr-16">Copyright @ 2024</p>
         </div>
